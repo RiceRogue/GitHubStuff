@@ -1,2 +1,3 @@
-# RiceRogue
-Eric Ni
+# GitHubStuff
+Eric Ni's Work
+
