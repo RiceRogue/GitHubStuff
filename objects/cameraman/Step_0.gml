@@ -47,6 +47,6 @@ avg = mean(p1distance, p2distance);
 
 y += (avg - y)/20
 
-clamp(y, 0, room_height);
+clamp(y, 50, room_height - 50);
 
 camera_set_view_pos(view_camera[0], 0, y - 250)

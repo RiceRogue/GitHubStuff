@@ -87,7 +87,14 @@ if(dead = true){
 		sprite_index = spr_p1death
 	}
 						
+//exploding ability
 
+if(keyboard_check(vk_up)){
+	
+	bombing
+	
+	
+	}
 
 
 	

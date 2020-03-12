@@ -45,8 +45,8 @@ for( i = 0; i < 25; i ++;){
 	if(i > 23){
 		
 		
-		instance_create_layer(new_x, 1100, "Instances", obj_p1);
-		instance_create_layer(new_x2, 1100, "Instances", obj_p2);
+		instance_create_layer(new_x, 1050, "Instances", obj_p1);
+		instance_create_layer(new_x2, 1050, "Instances", obj_p2);
 	
 	}
 }
