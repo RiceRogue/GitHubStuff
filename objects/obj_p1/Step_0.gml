@@ -125,9 +125,9 @@ if(keyboard_check_released(vk_up)){
 }
 
 
-if(dead = false){
+if(dead = false && y < room_height){
 	
-			part_particles_create(parts, obj_p1.x, obj_p1.y, trail, 5);
+		part_particles_create(parts, obj_p1.x, obj_p1.y, trail, 5);
 	
 	}
 	

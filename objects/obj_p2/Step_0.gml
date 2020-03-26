@@ -73,7 +73,7 @@ if(dead = true){
 	}
 				
 				
-if(dead = false){
+if(dead = false && y < room_height){
 	
 			part_particles_create(parts, obj_p2.x, obj_p2.y, trail2, 5);
 	}
