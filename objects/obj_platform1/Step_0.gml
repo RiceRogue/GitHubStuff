@@ -4,10 +4,10 @@ randomize();
 
 if(deleter > 0){
 
-	image_speed = 0.5;
+	image_speed = 1;
 	sprite_index = destroybrick1;
 
-	deleter -= 5;
+	deleter --;
 	
 	if(deleter <= 0){
 		

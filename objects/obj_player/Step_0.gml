@@ -60,9 +60,9 @@ if(ySpeed > 0){
 							}
 							obj_p1.dead = true;
 							audio_play_sound(playerhit, 0, false);
-							
-					
-							
+							alarm[0] = 10;
+							sleep(100);
+							instance_create_layer(obj_p1.x, obj_p1.y, "Instances", obj_explosion)
 							
 						}
 						
@@ -78,8 +78,9 @@ if(ySpeed > 0){
 							}
 							obj_p2.dead = true;
 							audio_play_sound(playerhit, 0, false);
-						
-						
+							alarm[0] = 10;
+							sleep(100);
+							instance_create_layer(obj_p2.x, obj_p2.y, "Instances", obj_explosion)
 						}
 						
 						
@@ -114,9 +115,35 @@ if(dead = true){
 }
 
 
+//bombings
+if(bombing == true){
+	
+	audio_play_sound(exploding, 0, false);
+	var inst = id; 
+		while inst != noone {
+		   inst = instance_place(x,y,obj_platform)
+		   instance_destroy(inst);
+		}
+	
+	
+	}	
 
 
 
 //var camera_y = y - 0.5* camera_get_view_height(view_camera[0]);
 //camera_set_view_pos( view_camera[0], 0, camera_y);
+
+if(alarm[0] > 0){
+	//give camera random position
+	randomize();
+	var camx = camera_get_view_x(view_camera[0]);
+	var camy = camera_get_view_y(view_camera[0]);
+	
+	var newx = camx + irandom_range(-alarm[0]*2, alarm[0] *2);
+	var newy = camy + irandom_range(-alarm[0]*2, alarm[0]*2);
+	
+	camera_set_view_pos(view_camera[0], newx, newy);
+}
+
+
 

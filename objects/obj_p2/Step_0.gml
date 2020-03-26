@@ -71,6 +71,11 @@ if(dead = true){
 
 		sprite_index = spr_p2death
 	}
-						
+				
+				
+if(dead = false){
+	
+			part_particles_create(parts, obj_p2.x, obj_p2.y, trail2, 5);
+	}
 
 	

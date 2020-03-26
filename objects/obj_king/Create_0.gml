@@ -13,7 +13,7 @@ global.respawn1 = false;
 global.respawn2 = false;
 
 delay = 0;
-instance_create_layer(room_width/2, room_height - 200, "Extras", cameraman);
+instance_create_layer(0, room_height - 200, "Extras", cameraman);
 instance_create_layer(room_width/2, room_height - 32 , "Instances", obj_ground);
 
 
@@ -50,5 +50,14 @@ for( i = 0; i < 25; i ++;){
 	
 	}
 }
+
+
+audio_play_sound(song, 0, true)
+
+
+
+
+
+//particles
 
 

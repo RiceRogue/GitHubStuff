@@ -23,6 +23,16 @@
             "enumb": 0,
             "eventtype": 0,
             "m_owner": "9ec634c2-ac36-4bb9-96a3-65f788d458d6"
+        },
+        {
+            "id": "69ed4de7-a4bb-4cc2-93ca-9506d7c05bf0",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 2,
+            "m_owner": "9ec634c2-ac36-4bb9-96a3-65f788d458d6"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -223,6 +233,20 @@
             "value": "0",
             "varName": "bombing",
             "varType": 3
+        },
+        {
+            "id": "a457482a-8c86-477e-9934-f735385beb43",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "delay",
+            "varType": 0
         }
     ],
     "solid": false,

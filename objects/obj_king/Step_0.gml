@@ -36,4 +36,6 @@ if(keyboard_check(vk_space)){
 	obj_p2.ySpeed = 0;
 }
 
-	
+
+		//part_emitter_region(parts, emitter, obj_p1.x - 20, obj_p2.x + 20, ps_shape_ellipse, ps_distr_gaussian);
+		//part_emitter_stream(parts, emitter, trail, 5);

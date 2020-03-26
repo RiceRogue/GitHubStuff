@@ -44,7 +44,7 @@ if(count > 20){
 
 
 //fallingsprite
-
+if(!keyboard_check(vk_up)){
 if(ySpeed < 0 && (xSpeed < 0 || xSpeed == 0) && jumping = true){
 	image_speed = 1.75;
 	sprite_index = spr_p1falling1;
@@ -68,6 +68,8 @@ if(ySpeed < 0 && xSpeed > 0 && jumping = true){
 //	sprite_index = spr_p1right;
 
 //}
+	}
+
 }
 
 
@@ -90,13 +92,42 @@ if(dead = true){
 //exploding ability
 
 if(keyboard_check(vk_up)){
+
+	if(!audio_is_playing(ticking)){
+	audio_play_sound(ticking, 0, false);
+	}
 	
-	bombing
+	sprite_index = spr_p1bombing
 	
+	delay++;
+
+	
+	if(delay > 60){
+		
+		
+		instance_create_layer(x,y, "Instances", obj_p1bomb);
+		bombing = true;
+		ySpeed = 0;
+		xSpeed = 0;
+		}
+	
+		
+} else {
+	
+	audio_stop_sound(ticking);
+	
+}
+
+if(keyboard_check_released(vk_up)){
+	
+	delay = 0;
+	
+}
+
+
+if(dead = false){
+	
+			part_particles_create(parts, obj_p1.x, obj_p1.y, trail, 5);
 	
 	}
-
-
 	
-
-
