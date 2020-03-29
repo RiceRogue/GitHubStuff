@@ -31,7 +31,7 @@ if(count > 20){
 	
 	obj_king.score1 --;
 	audio_play_sound(death, 0, false);
-	instance_destroy(obj_p1, 0);
+	instance_destroy(obj_p1);
 
 	
 
@@ -44,7 +44,7 @@ if(count > 20){
 
 
 //fallingsprite
-if(!keyboard_check(vk_up)){
+if(!keyboard_check(vk_up) && !(keyboard_check_pressed(vk_up))){
 if(ySpeed < 0 && (xSpeed < 0 || xSpeed == 0) && jumping = true){
 	image_speed = 1.75;
 	sprite_index = spr_p1falling1;
@@ -90,7 +90,7 @@ if(dead = true){
 	}
 						
 //exploding ability
-
+if(dead = false){
 if(keyboard_check(vk_up)){
 
 	if(!audio_is_playing(ticking)){
@@ -106,6 +106,7 @@ if(keyboard_check(vk_up)){
 		
 		
 		instance_create_layer(x,y, "Instances", obj_p1bomb);
+		dead = true;
 		bombing = true;
 		ySpeed = 0;
 		xSpeed = 0;
@@ -122,6 +123,7 @@ if(keyboard_check_released(vk_up)){
 	
 	delay = 0;
 	
+	}
 }
 
 

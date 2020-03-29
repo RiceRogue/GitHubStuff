@@ -1,4 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 image_speed = 0;
-instance_destroy(obj_explosion);
+instance_destroy(id);
+
+//object index

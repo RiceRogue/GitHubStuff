@@ -31,7 +31,7 @@ if(x > room_width - 16){
 
 //bounces
 
-if(dead = false){
+if(dead = false && bombing = false){
 if(ySpeed > 0){
 	
 	for(var dist_moved = 0; dist_moved < ySpeed; dist_moved ++){
@@ -86,15 +86,26 @@ if(ySpeed > 0){
 						
 						
 						
-						if(colliding.object_index == obj_platform1 || 
-						colliding.object_index == obj_platform2 ||
-						colliding.object_index == obj_platform3 ||
-						colliding.object_index == obj_platform4) {
-
+						if(colliding.object_index == obj_platform1){
+							instance_create_layer(colliding.x, colliding.y, "Instances", obj_destroybrick1)
+							instance_destroy(colliding);
+						} else
+						
+						if(colliding.object_index == obj_platform2){
+							instance_create_layer(colliding.x, colliding.y, "Instances", obj_destroybrick2)
+							instance_destroy(colliding);
+						} else
+						
+						if(colliding.object_index == obj_platform3){
+							instance_create_layer(colliding.x, colliding.y, "Instances", obj_destroybrick3)
+							instance_destroy(colliding);	
+						} else
+						
+						if(colliding.object_index == obj_platform4) {
 							
-						if(colliding.deleter == 0){
-						colliding.deleter = 30;
-						}
+							instance_create_layer(colliding.x, colliding.y, "Instances", obj_destroybrick4)
+							instance_destroy(colliding);
+					
 					} 
 					break;
 	
@@ -109,24 +120,9 @@ if(ySpeed > 0){
 }
 
 
-if(dead = true){
-	instance_create_layer(x,y, "Instances", obj_explosion)
-	
-}
 
 
-//bombings
-if(bombing == true){
-	
-	audio_play_sound(exploding, 0, false);
-	var inst = id; 
-		while inst != noone {
-		   inst = instance_place(x,y,obj_platform)
-		   instance_destroy(inst);
-		}
-	
-	
-	}	
+
 
 
 

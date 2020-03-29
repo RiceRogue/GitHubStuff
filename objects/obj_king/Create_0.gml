@@ -9,8 +9,16 @@ new_x = 0;
 new_x2 = 0;
 new_brick = 0;
 i = 0;
+
+bricktime = 0;
 global.respawn1 = false;
 global.respawn2 = false;
+
+
+global.p1destroy = false;
+global.p2destroy = false;
+
+
 
 delay = 0;
 instance_create_layer(0, room_height - 200, "Extras", cameraman);

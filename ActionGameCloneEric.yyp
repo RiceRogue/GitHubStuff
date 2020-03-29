@@ -263,6 +263,22 @@
             }
         },
         {
+            "Key": "5bc0b716-c7d5-42ec-b8de-8d99cdef0790",
+            "Value": {
+                "id": "f6de04d9-2b9e-48c7-8a59-eacc94289bce",
+                "resourcePath": "objects\\obj_destroybrick1\\obj_destroybrick1.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "5e6b0245-9183-4137-8e65-fce906ddd08a",
+            "Value": {
+                "id": "3dac65c9-02fc-4af4-a545-1a4685258f0b",
+                "resourcePath": "objects\\obj_destroybrick4\\obj_destroybrick4.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "61a9bcdc-7049-4a02-8a1a-dc80dfd5b69e",
             "Value": {
                 "id": "7796edf3-9522-4de5-9f9f-4c948202c8bb",
@@ -287,11 +303,19 @@
             }
         },
         {
-            "Key": "6ec5a482-899c-445f-ab61-e84ed7d2304b",
+            "Key": "6d9b85de-ef5b-46dd-84c8-d4d4d7caa280",
             "Value": {
-                "id": "f3690143-1540-44aa-ba75-243b9a8847ed",
-                "resourcePath": "objects\\obj_platformdestroy\\obj_platformdestroy.yy",
-                "resourceType": "GMObject"
+                "id": "47c7507a-bb58-4ea8-bf1f-2d62a4c26c2b",
+                "resourcePath": "sprites\\spr_p2bombing\\spr_p2bombing.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "720a59b0-40b4-416e-bdec-1653115cba47",
+            "Value": {
+                "id": "3f7fa9ea-1fc2-4c86-a208-3f14d8f01480",
+                "resourcePath": "sounds\\exploding2\\exploding2.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -495,6 +519,14 @@
             }
         },
         {
+            "Key": "bddecfb4-32e1-46c0-a260-75366a4f86a9",
+            "Value": {
+                "id": "3e837a29-a86f-4ce8-8815-80f8e7d05f8b",
+                "resourcePath": "objects\\obj_destroybrick3\\obj_destroybrick3.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "bf1de4d4-459d-41b0-97fb-391ff82fb13b",
             "Value": {
                 "id": "98acf97c-c8fa-45d3-a959-ebca59454f0a",
@@ -516,6 +548,14 @@
                 "id": "4d83078f-255e-468b-a1ed-35cff84c51d9",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "d07a94e1-78b6-4ce6-a607-77ef18f2099c",
+            "Value": {
+                "id": "50a1e253-7d99-4873-886e-3f34a0ace6f0",
+                "resourcePath": "objects\\obj_destroybrick2\\obj_destroybrick2.yy",
+                "resourceType": "GMObject"
             }
         },
         {

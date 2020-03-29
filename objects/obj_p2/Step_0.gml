@@ -30,7 +30,7 @@ if(count > 20){
 	instance_create_layer(x,y - 90, "Instances", obj_explosion)
 	obj_king.score2 --;
 	audio_play_sound(death, 0, false);
-	instance_destroy(obj_p2, 0);
+	instance_destroy(obj_p2);
 
 	
 	
@@ -79,3 +79,39 @@ if(dead = false && y < room_height){
 	}
 
 	
+if(dead = false){	
+	if(keyboard_check(ord("W"))){
+
+	if(!audio_is_playing(ticking)){
+	audio_play_sound(ticking, 0, false);
+	}
+	
+	sprite_index = spr_p2bombing
+	
+	delay++;
+
+	
+	if(delay > 60){
+		
+		
+		instance_create_layer(x,y, "Instances", obj_p2bomb);
+		dead = true;
+		bombing = true;
+		ySpeed = 0;
+		xSpeed = 0;
+		}
+	
+		
+} else {
+	
+	audio_stop_sound(ticking);
+	
+}
+
+if(keyboard_check_released(ord("W"))){
+	
+	delay = 0;
+	
+
+	}
+}

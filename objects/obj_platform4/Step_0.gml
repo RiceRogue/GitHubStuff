@@ -8,14 +8,9 @@ if(deleter > 0){
 	sprite_index = destroybrick4;
 	deleter --;
 
-	if(deleter == 0){
+
 		
-		
-		brick_y = irandom_range(4,17)
-		brick_x = irandom_range(1,6)
-		instance_destroy();
-		instance_create_layer(brick_x * 90, brick_y * 50, "Instances", obj_platform4);
-	}
+	
 }
 
 
