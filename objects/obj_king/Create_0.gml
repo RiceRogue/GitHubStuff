@@ -15,8 +15,11 @@ global.respawn1 = false;
 global.respawn2 = false;
 
 
-global.p1destroy = false;
-global.p2destroy = false;
+bombedp1 = false;
+bombedp2 = false;
+
+fizzp1 = false;
+fizzp2 = false;
 
 
 
@@ -26,7 +29,7 @@ instance_create_layer(room_width/2, room_height - 32 , "Instances", obj_ground);
 
 
 
-for( i = 0; i < 25; i ++;){
+for( i = 0; i < 20; i ++;){
 	randomize();
 	 brick_x = irandom_range(1, 6)
 	 brick_y = irandom_range(4, 17);
@@ -50,7 +53,7 @@ for( i = 0; i < 25; i ++;){
 	 }
 		
 
-	if(i > 23){
+	if(i > 18){
 		
 		
 		instance_create_layer(new_x, 1050, "Instances", obj_p1);
@@ -68,4 +71,32 @@ audio_play_sound(song, 0, true)
 
 //particles
 
+
+parts = part_system_create();
+
+
+trail = part_type_create();
+//trail.depth = -10000;
+part_type_shape(trail, pt_shape_pixel);
+
+part_type_size(trail, 3,7, 0, 0);
+part_type_speed(trail,0, 0, 0, 1);
+part_type_color3(trail, c_black,c_red, c_fuchsia)
+part_type_life(trail, 10, 30);
+
+part_type_orientation(trail, -180, 180, 0, 0, 1);
+
+
+
+
+
+trail2 = part_type_create();
+//trail2.depth = -10000
+part_type_shape(trail2, pt_shape_pixel);
+
+part_type_size(trail2, 3,7, 0, 0);
+part_type_speed(trail2,0, 0, 0, 1);
+part_type_color3(trail2, c_black, c_blue, c_teal)
+part_type_life(trail2, 10, 30);
+part_type_orientation(trail2, -180, 180, 0, 0, 1);
 

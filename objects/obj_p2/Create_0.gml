@@ -5,3 +5,5 @@ event_inherited();
 count = 0;
 dead = false;
 bombing = false;
+
+global.respawn2 = false;

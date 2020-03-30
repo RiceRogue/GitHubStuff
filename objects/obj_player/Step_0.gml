@@ -61,7 +61,7 @@ if(ySpeed > 0){
 							obj_p1.dead = true;
 							audio_play_sound(playerhit, 0, false);
 							alarm[0] = 10;
-							sleep(100);
+							//sleep(100);
 							instance_create_layer(obj_p1.x, obj_p1.y, "Instances", obj_explosion)
 							
 						}
@@ -79,7 +79,7 @@ if(ySpeed > 0){
 							obj_p2.dead = true;
 							audio_play_sound(playerhit, 0, false);
 							alarm[0] = 10;
-							sleep(100);
+							//sleep(100);
 							instance_create_layer(obj_p2.x, obj_p2.y, "Instances", obj_explosion)
 						}
 						

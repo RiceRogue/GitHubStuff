@@ -2,10 +2,10 @@
 // You can write your code in this editor
 randomize();
 
-if(keyboard_check_pressed(ord("R"))){
-	room_restart();
+//if(keyboard_check_pressed(ord("R"))){
+//	room_restart();
 	
-	}
+//	}
 	
 	var  new_x = random_range(0, room_width - 80)
 	
@@ -29,20 +29,20 @@ if(keyboard_check_pressed(ord("R"))){
 	}
 }
 
-if(keyboard_check(vk_space)){
+//if(keyboard_check(vk_space)){
 	
 	
-	obj_p1.ySpeed = 0;
-	obj_p2.ySpeed = 0;
-}
+//	obj_p1.ySpeed = 0;
+//	obj_p2.ySpeed = 0;
+//}
 
 
-if(instance_number(obj_platform) < 25){
+if(instance_number(obj_platform) < 20){
 	
 	bricktime ++;
 	
-	if(bricktime > 60){
-	for( i = instance_number(obj_platform); i < 25; i ++;){
+	if(bricktime > 120){
+	for( i = instance_number(obj_platform); i < 20; i ++;){
 	randomize();
 	 brick_x = irandom_range(1, 6)
 	 brick_y = irandom_range(4, 17);
@@ -68,6 +68,49 @@ if(instance_number(obj_platform) < 25){
 		bricktime = 0;
 	}
 }
+
+
+	if(bombedp1 == true){
+		obj_king.score1 +=2;
+		bombedp1 = false;
+	
+	} else if(bombedp2 == true){
+		
+		obj_king.score2 +=2;
+		bombedp2 = false;
+		
+	} else if(bombedp1 == true && bombedp2 == true){
+			
+			show_message("BOMBED")
+			bombedp1 = false;
+			bombedp2 = false;
+		
+	
+		}
+		
+		
+		
+	//	if(fizzp1 == true){
+	//	obj_king.score1 --;
+	//	fizzp1 = false;
+	
+	//} else if(fizzp2 == true){
+		
+	//	obj_king.score2 --;
+	//	fizzp2 = false;
+		
+	//}
+		
+		
+	if(score1 >= 10){
+		room_goto(victoryp1);
+	}
+	
+	if(score2 >= 10){
+		room_goto(victoryp2);
+	}
+		
+
 
 //var numexplosionsinroom = instance_number(obj_explosion);
 //for (i=0; i<numexplosionsinroom; i++){

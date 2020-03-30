@@ -32,10 +32,6 @@ if(count > 20){
 	audio_play_sound(death, 0, false);
 	instance_destroy(obj_p2);
 
-	
-	
-
-	global.respawn2 = true;
 	}
 }
 
@@ -75,7 +71,7 @@ if(dead = true){
 				
 if(dead = false && y < room_height){
 	
-			part_particles_create(parts, obj_p2.x, obj_p2.y, trail2, 5);
+			part_particles_create(obj_king.parts, obj_p2.x, obj_p2.y, obj_king.trail2, 5);
 	}
 
 	
@@ -111,7 +107,7 @@ if(dead = false){
 if(keyboard_check_released(ord("W"))){
 	
 	delay = 0;
-	
+	sprite_index = spr_p2falling1;
 
 	}
 }

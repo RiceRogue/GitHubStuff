@@ -34,9 +34,6 @@ if(count > 20){
 	instance_destroy(obj_p1);
 
 	
-
-	global.respawn1 = true;
-	
 	
 	}
 }
@@ -44,7 +41,7 @@ if(count > 20){
 
 
 //fallingsprite
-if(!keyboard_check(vk_up) && !(keyboard_check_pressed(vk_up))){
+if(!keyboard_check(vk_up)){
 if(ySpeed < 0 && (xSpeed < 0 || xSpeed == 0) && jumping = true){
 	image_speed = 1.75;
 	sprite_index = spr_p1falling1;
@@ -57,7 +54,7 @@ if(ySpeed < 0 && (xSpeed < 0 || xSpeed == 0) && jumping = true){
 //}
 }
 if(ySpeed < 0 && xSpeed > 0 && jumping = true){
-	image_speed = 1.75;
+
 
 	image_speed = 1.75;
 	sprite_index = spr_p1falling1;
@@ -100,7 +97,6 @@ if(keyboard_check(vk_up)){
 	sprite_index = spr_p1bombing
 	
 	delay++;
-
 	
 	if(delay > 60){
 		
@@ -110,6 +106,7 @@ if(keyboard_check(vk_up)){
 		bombing = true;
 		ySpeed = 0;
 		xSpeed = 0;
+		
 		}
 	
 		
@@ -122,6 +119,7 @@ if(keyboard_check(vk_up)){
 if(keyboard_check_released(vk_up)){
 	
 	delay = 0;
+	sprite_index = spr_p1falling1;
 	
 	}
 }
@@ -129,7 +127,7 @@ if(keyboard_check_released(vk_up)){
 
 if(dead = false && y < room_height){
 	
-		part_particles_create(parts, obj_p1.x, obj_p1.y, trail, 5);
+		part_particles_create(obj_king.parts, obj_p1.x, obj_p1.y, obj_king.trail, 5);
 	
 	}
 	
